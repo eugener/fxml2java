@@ -37,7 +37,7 @@ public class FXML2JavaConverter {
 //        root.printTree(1);
     }
 
-    public void convert(OutputStream os) {
+    public void convertTo(OutputStream os) {
 
         //TODO imports
 

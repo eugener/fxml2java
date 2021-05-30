@@ -21,7 +21,7 @@ public class Example {
             if (!Files.exists(path)) {
                 Files.createFile(path);
             }
-            converter.convert( new FileOutputStream( path.toFile()));
+            converter.convertTo( new FileOutputStream( path.toFile()));
             System.out.println("Written to " + path.toAbsolutePath());
 
         } catch (IOException | SAXException e) {
