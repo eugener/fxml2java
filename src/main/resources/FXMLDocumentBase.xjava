@@ -1,0 +1,312 @@
+package fxassignment4usingnonbuiltinclass;
+
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+
+public abstract class FXMLDocumentBase extends AnchorPane {
+
+    protected final Button btnQuit;
+    protected final Label label;
+    protected final Label lblTitle;
+    protected final Pane paneBuyingSelling;
+    protected final Label lblNumberBottles;
+    protected final TextField txtNumberBottles;
+    protected final Button btnCustomerBuys;
+    protected final Label lblNumberBatches;
+    protected final TextField txtNumberBatches;
+    protected final Label lblNote;
+    protected final Button btnStoreOrders;
+    protected final Label lblBuyingSelling;
+    protected final Button btnRestart;
+    protected final Button btnShowResults;
+    protected final Button btnHideResults;
+    protected final Label lblResults;
+    protected final Pane paneResults;
+    protected final Label lblPrice;
+    protected final Label lblPriceResult;
+    protected final Label lblCost;
+    protected final Label lblCostResult;
+    protected final Label lblProfitMargin;
+    protected final Label lblProfitMarginResult;
+    protected final Label lblBottlesSold;
+    protected final Label lblBottlesSoldResult;
+    protected final Label lblPillsSold;
+    protected final Label lblPillsSoldResult;
+    protected final Label lblRevenues;
+    protected final Label lblRevenuesResult;
+    protected final Label lblProfit;
+    protected final Label lblProfitResult;
+    protected final Label lblInventoryBottles;
+    protected final Label lblInventoryBottlesResult;
+    protected final Label lblInventoryPills;
+    protected final Label lblInventoryPillsResult;
+    protected final Label lblCostInventory;
+    protected final Label lblCostInventoryResult;
+
+    public FXMLDocumentBase() {
+
+        btnQuit = new Button();
+        label = new Label();
+        lblTitle = new Label();
+        paneBuyingSelling = new Pane();
+        lblNumberBottles = new Label();
+        txtNumberBottles = new TextField();
+        btnCustomerBuys = new Button();
+        lblNumberBatches = new Label();
+        txtNumberBatches = new TextField();
+        lblNote = new Label();
+        btnStoreOrders = new Button();
+        lblBuyingSelling = new Label();
+        btnRestart = new Button();
+        btnShowResults = new Button();
+        btnHideResults = new Button();
+        lblResults = new Label();
+        paneResults = new Pane();
+        lblPrice = new Label();
+        lblPriceResult = new Label();
+        lblCost = new Label();
+        lblCostResult = new Label();
+        lblProfitMargin = new Label();
+        lblProfitMarginResult = new Label();
+        lblBottlesSold = new Label();
+        lblBottlesSoldResult = new Label();
+        lblPillsSold = new Label();
+        lblPillsSoldResult = new Label();
+        lblRevenues = new Label();
+        lblRevenuesResult = new Label();
+        lblProfit = new Label();
+        lblProfitResult = new Label();
+        lblInventoryBottles = new Label();
+        lblInventoryBottlesResult = new Label();
+        lblInventoryPills = new Label();
+        lblInventoryPillsResult = new Label();
+        lblCostInventory = new Label();
+        lblCostInventoryResult = new Label();
+
+        setId("AnchorPane");
+        setPrefHeight(377.0);
+        setPrefWidth(461.0);
+
+        btnQuit.setLayoutX(22.0);
+        btnQuit.setLayoutY(340.0);
+        btnQuit.setOnAction(this::handlebtnQuitAction);
+        btnQuit.setText("Quit");
+
+        label.setLayoutX(126);
+        label.setLayoutY(120);
+        label.setMinHeight(16);
+        label.setMinWidth(69);
+
+        lblTitle.setLayoutX(40.0);
+        lblTitle.setLayoutY(6.0);
+        lblTitle.setText("Assignment 4 Vitamin Store - by Joe Waldron");
+
+        paneBuyingSelling.setLayoutX(12.0);
+        paneBuyingSelling.setLayoutY(56.0);
+        paneBuyingSelling.setPrefHeight(164.0);
+        paneBuyingSelling.setPrefWidth(216.0);
+        paneBuyingSelling.setStyle("-fx-border-style: solid;");
+
+        lblNumberBottles.setLayoutX(14.0);
+        lblNumberBottles.setLayoutY(14.0);
+        lblNumberBottles.setText("Number of Bottles");
+
+        txtNumberBottles.setLayoutX(125.0);
+        txtNumberBottles.setLayoutY(10.0);
+        txtNumberBottles.setPrefHeight(25.0);
+        txtNumberBottles.setPrefWidth(57.0);
+
+        btnCustomerBuys.setLayoutX(60.0);
+        btnCustomerBuys.setLayoutY(44.0);
+        btnCustomerBuys.setMnemonicParsing(false);
+        btnCustomerBuys.setOnAction(this::handlebtnCustomerBuysAction);
+        btnCustomerBuys.setText("Customer Buys");
+
+        lblNumberBatches.setLayoutX(14.0);
+        lblNumberBatches.setLayoutY(83.0);
+        lblNumberBatches.setText("Number of Batches");
+
+        txtNumberBatches.setLayoutX(125.0);
+        txtNumberBatches.setLayoutY(79.0);
+        txtNumberBatches.setPrefHeight(25.0);
+        txtNumberBatches.setPrefWidth(57.0);
+
+        lblNote.setLayoutX(14.0);
+        lblNote.setLayoutY(113.0);
+
+        btnStoreOrders.setLayoutX(61.0);
+        btnStoreOrders.setLayoutY(130.0);
+        btnStoreOrders.setMnemonicParsing(false);
+        btnStoreOrders.setOnAction(this::handlebtnStoreOrdersAction);
+        btnStoreOrders.setPrefHeight(25.0);
+        btnStoreOrders.setPrefWidth(95.0);
+        btnStoreOrders.setText("Store Orders");
+
+        lblBuyingSelling.setLayoutX(12.0);
+        lblBuyingSelling.setLayoutY(39.0);
+        lblBuyingSelling.setText("Buying and Selling Vitamins");
+
+        btnRestart.setLayoutX(15.0);
+        btnRestart.setLayoutY(229.0);
+        btnRestart.setMnemonicParsing(false);
+        btnRestart.setOnAction(this::handlebtnRestartAction);
+        btnRestart.setText("Restart");
+
+        btnShowResults.setLayoutX(13.0);
+        btnShowResults.setLayoutY(263.0);
+        btnShowResults.setMnemonicParsing(false);
+        btnShowResults.setOnAction(this::handlebtnShowResultsAction);
+        btnShowResults.setText("Show Results");
+
+        btnHideResults.setLayoutX(15.0);
+        btnHideResults.setLayoutY(296.0);
+        btnHideResults.setMnemonicParsing(false);
+        btnHideResults.setOnAction(this::handlebtnHideResultsAction);
+        btnHideResults.setText("Hide Results");
+
+        lblResults.setLayoutX(245.0);
+        lblResults.setLayoutY(39.0);
+        lblResults.setText("Results");
+
+        paneResults.setLayoutX(238.0);
+        paneResults.setLayoutY(56.0);
+        paneResults.setPrefHeight(309.0);
+        paneResults.setPrefWidth(204.0);
+        paneResults.setStyle("-fx-border-style: solid;");
+
+        lblPrice.setLayoutX(14.0);
+        lblPrice.setLayoutY(6.0);
+        lblPrice.setText("Price");
+
+        lblPriceResult.setLayoutX(125.0);
+        lblPriceResult.setLayoutY(6.0);
+        lblPriceResult.setText(" ");
+
+        lblCost.setLayoutX(13.0);
+        lblCost.setLayoutY(34.0);
+        lblCost.setText("Cost");
+
+        lblCostResult.setLayoutX(125.0);
+        lblCostResult.setLayoutY(34.0);
+        lblCostResult.setText(" ");
+
+        lblProfitMargin.setLayoutX(13.0);
+        lblProfitMargin.setLayoutY(63.0);
+        lblProfitMargin.setText("Profit Margin");
+
+        lblProfitMarginResult.setLayoutX(125.0);
+        lblProfitMarginResult.setLayoutY(63.0);
+        lblProfitMarginResult.setText(" ");
+
+        lblBottlesSold.setLayoutX(13.0);
+        lblBottlesSold.setLayoutY(94.0);
+        lblBottlesSold.setText("Bottles Sold");
+
+        lblBottlesSoldResult.setLayoutX(125.0);
+        lblBottlesSoldResult.setLayoutY(94.0);
+        lblBottlesSoldResult.setText(" ");
+
+        lblPillsSold.setLayoutX(13.0);
+        lblPillsSold.setLayoutY(125.0);
+        lblPillsSold.setText("Pills Sold");
+
+        lblPillsSoldResult.setLayoutX(125.0);
+        lblPillsSoldResult.setLayoutY(125.0);
+        lblPillsSoldResult.setText(" ");
+
+        lblRevenues.setLayoutX(13.0);
+        lblRevenues.setLayoutY(157.0);
+        lblRevenues.setText("Revenues");
+
+        lblRevenuesResult.setLayoutX(125.0);
+        lblRevenuesResult.setLayoutY(157.0);
+        lblRevenuesResult.setText(" ");
+
+        lblProfit.setLayoutX(13.0);
+        lblProfit.setLayoutY(185.0);
+        lblProfit.setText("Profit");
+
+        lblProfitResult.setLayoutX(125.0);
+        lblProfitResult.setLayoutY(185.0);
+        lblProfitResult.setText(" ");
+
+        lblInventoryBottles.setLayoutX(13.0);
+        lblInventoryBottles.setLayoutY(211.0);
+        lblInventoryBottles.setText("Inventory(Bottles)");
+
+        lblInventoryBottlesResult.setLayoutX(125.0);
+        lblInventoryBottlesResult.setLayoutY(211.0);
+        lblInventoryBottlesResult.setText(" ");
+
+        lblInventoryPills.setLayoutX(13.0);
+        lblInventoryPills.setLayoutY(238.0);
+        lblInventoryPills.setText("Inventory (Pills)");
+
+        lblInventoryPillsResult.setLayoutX(125.0);
+        lblInventoryPillsResult.setLayoutY(238.0);
+        lblInventoryPillsResult.setText(" ");
+
+        lblCostInventory.setLayoutX(13.0);
+        lblCostInventory.setLayoutY(268.0);
+        lblCostInventory.setText("Cost of Inventory");
+
+        lblCostInventoryResult.setLayoutX(125.0);
+        lblCostInventoryResult.setLayoutY(268.0);
+        lblCostInventoryResult.setText(" ");
+
+        getChildren().add(btnQuit);
+        getChildren().add(label);
+        getChildren().add(lblTitle);
+        paneBuyingSelling.getChildren().add(lblNumberBottles);
+        paneBuyingSelling.getChildren().add(txtNumberBottles);
+        paneBuyingSelling.getChildren().add(btnCustomerBuys);
+        paneBuyingSelling.getChildren().add(lblNumberBatches);
+        paneBuyingSelling.getChildren().add(txtNumberBatches);
+        paneBuyingSelling.getChildren().add(lblNote);
+        paneBuyingSelling.getChildren().add(btnStoreOrders);
+        getChildren().add(paneBuyingSelling);
+        getChildren().add(lblBuyingSelling);
+        getChildren().add(btnRestart);
+        getChildren().add(btnShowResults);
+        getChildren().add(btnHideResults);
+        getChildren().add(lblResults);
+        paneResults.getChildren().add(lblPrice);
+        paneResults.getChildren().add(lblPriceResult);
+        paneResults.getChildren().add(lblCost);
+        paneResults.getChildren().add(lblCostResult);
+        paneResults.getChildren().add(lblProfitMargin);
+        paneResults.getChildren().add(lblProfitMarginResult);
+        paneResults.getChildren().add(lblBottlesSold);
+        paneResults.getChildren().add(lblBottlesSoldResult);
+        paneResults.getChildren().add(lblPillsSold);
+        paneResults.getChildren().add(lblPillsSoldResult);
+        paneResults.getChildren().add(lblRevenues);
+        paneResults.getChildren().add(lblRevenuesResult);
+        paneResults.getChildren().add(lblProfit);
+        paneResults.getChildren().add(lblProfitResult);
+        paneResults.getChildren().add(lblInventoryBottles);
+        paneResults.getChildren().add(lblInventoryBottlesResult);
+        paneResults.getChildren().add(lblInventoryPills);
+        paneResults.getChildren().add(lblInventoryPillsResult);
+        paneResults.getChildren().add(lblCostInventory);
+        paneResults.getChildren().add(lblCostInventoryResult);
+        getChildren().add(paneResults);
+
+    }
+
+    protected abstract void handlebtnQuitAction(javafx.event.ActionEvent actionEvent);
+
+    protected abstract void handlebtnCustomerBuysAction(javafx.event.ActionEvent actionEvent);
+
+    protected abstract void handlebtnStoreOrdersAction(javafx.event.ActionEvent actionEvent);
+
+    protected abstract void handlebtnRestartAction(javafx.event.ActionEvent actionEvent);
+
+    protected abstract void handlebtnShowResultsAction(javafx.event.ActionEvent actionEvent);
+
+    protected abstract void handlebtnHideResultsAction(javafx.event.ActionEvent actionEvent);
+
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="461.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="fxassignment4usingnonbuiltinclass.FXMLDocumentController">
+    <children>
+        <Button fx:id="btnQuit" layoutX="22.0" layoutY="340.0" onAction="#handlebtnQuitAction" text="Quit" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label fx:id="lblTitle" layoutX="40.0" layoutY="6.0" text="Assignment 4 Vitamin Store - by Joe Waldron" />
+      <Pane fx:id="paneBuyingSelling" layoutX="12.0" layoutY="56.0" prefHeight="164.0" prefWidth="216.0" style="-fx-border-style: solid;">
+         <children>
+            <Label fx:id="lblNumberBottles" layoutX="14.0" layoutY="14.0" text="Number of Bottles" />
+            <TextField fx:id="txtNumberBottles" layoutX="125.0" layoutY="10.0" prefHeight="25.0" prefWidth="57.0" />
+            <Button fx:id="btnCustomerBuys" layoutX="60.0" layoutY="44.0" mnemonicParsing="false" onAction="#handlebtnCustomerBuysAction" text="Customer Buys" />
+            <Label fx:id="lblNumberBatches" layoutX="14.0" layoutY="83.0" text="Number of Batches" />
+            <TextField fx:id="txtNumberBatches" layoutX="125.0" layoutY="79.0" prefHeight="25.0" prefWidth="57.0" />
+            <Label fx:id="lblNote" layoutX="14.0" layoutY="113.0" />
+            <Button fx:id="btnStoreOrders" layoutX="61.0" layoutY="130.0" mnemonicParsing="false" onAction="#handlebtnStoreOrdersAction" prefHeight="25.0" prefWidth="95.0" text="Store Orders" />
+         </children>
+      </Pane>
+      <Label fx:id="lblBuyingSelling" layoutX="12.0" layoutY="39.0" text="Buying and Selling Vitamins" />
+      <Button fx:id="btnRestart" layoutX="15.0" layoutY="229.0" mnemonicParsing="false" onAction="#handlebtnRestartAction" text="Restart" />
+      <Button fx:id="btnShowResults" layoutX="13.0" layoutY="263.0" mnemonicParsing="false" onAction="#handlebtnShowResultsAction" text="Show Results" />
+      <Button fx:id="btnHideResults" layoutX="15.0" layoutY="296.0" mnemonicParsing="false" onAction="#handlebtnHideResultsAction" text="Hide Results" />
+      <Label fx:id="lblResults" layoutX="245.0" layoutY="39.0" text="Results" />
+      <Pane fx:id="paneResults" layoutX="238.0" layoutY="56.0" prefHeight="309.0" prefWidth="204.0" style="-fx-border-style: solid;">
+         <children>
+            <Label fx:id="lblPrice" layoutX="14.0" layoutY="6.0" text="Price" />
+            <Label fx:id="lblPriceResult" layoutX="125.0" layoutY="6.0" text=" " />
+            <Label fx:id="lblCost" layoutX="13.0" layoutY="34.0" text="Cost" />
+            <Label fx:id="lblCostResult" layoutX="125.0" layoutY="34.0" text=" " />
+            <Label fx:id="lblProfitMargin" layoutX="13.0" layoutY="63.0" text="Profit Margin" />
+            <Label fx:id="lblProfitMarginResult" layoutX="125.0" layoutY="63.0" text=" " />
+            <Label fx:id="lblBottlesSold" layoutX="13.0" layoutY="94.0" text="Bottles Sold" />
+            <Label fx:id="lblBottlesSoldResult" layoutX="125.0" layoutY="94.0" text=" " />
+            <Label fx:id="lblPillsSold" layoutX="13.0" layoutY="125.0" text="Pills Sold" />
+            <Label fx:id="lblPillsSoldResult" layoutX="125.0" layoutY="125.0" text=" " />
+            <Label fx:id="lblRevenues" layoutX="13.0" layoutY="157.0" text="Revenues" />
+            <Label fx:id="lblRevenuesResult" layoutX="125.0" layoutY="157.0" text=" " />
+            <Label fx:id="lblProfit" layoutX="13.0" layoutY="185.0" text="Profit" />
+            <Label fx:id="lblProfitResult" layoutX="125.0" layoutY="185.0" text=" " />
+            <Label fx:id="lblInventoryBottles" layoutX="13.0" layoutY="211.0" text="Inventory(Bottles)" />
+            <Label fx:id="lblInventoryBottlesResult" layoutX="125.0" layoutY="211.0" text=" " />
+            <Label fx:id="lblInventoryPills" layoutX="13.0" layoutY="238.0" text="Inventory (Pills)" />
+            <Label fx:id="lblInventoryPillsResult" layoutX="125.0" layoutY="238.0" text=" " />
+            <Label fx:id="lblCostInventory" layoutX="13.0" layoutY="268.0" text="Cost of Inventory" />
+            <Label fx:id="lblCostInventoryResult" layoutX="125.0" layoutY="268.0" text=" " />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
