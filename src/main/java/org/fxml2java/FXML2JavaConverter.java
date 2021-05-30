@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.*;
 
-public class Converter {
+public class FXML2JavaConverter {
 
     private static final String FXML_CLASS_NAME = "FXMLDocumentBase";
     private static final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -29,16 +29,7 @@ public class Converter {
     private final List<FXNode> allControls = new ArrayList<>();
     private final FXNode root;
 
-    public static void main(String[] args) {
-        try {
-            var converter = new Converter(Converter.class.getResourceAsStream("/FXMLDocument.fxml"));
-            converter.convert(System.out);
-        } catch (IOException | SAXException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public Converter(InputStream is) throws IOException, SAXException {
+    public FXML2JavaConverter(InputStream is) throws IOException, SAXException {
         Document doc = builder.parse(is);
         root = new FXNode(doc.getDocumentElement(), node -> {
             if (!node.isRoot()) allControls.add(node);
